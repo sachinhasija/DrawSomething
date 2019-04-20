@@ -12,11 +12,36 @@
     <title>Canvas Draw</title>
   </head>
   <body>
-    <h1 class="heading">Hold Mouse Left Click To Draw</h1>
-    <canvas id="drw"></canvas>
-    <button class="resetButton" id="clearCanvas">
-      Reset <i class="fas fa-redo"></i>
-    </button>
+    <section class="main-container">
+      <header class="heading">
+        <h1>Hold Mouse Left Click To Draw</h1>
+        <h3>Select style options and color from the options below</h3>
+      </header>
+      <section class="inputs">
+        <section class="input-solo">
+            <label for="style">Pick a Stroke Style: </label>
+            <select name="style" id="style" selected="round" autocomplete="off">
+              <option value="round">Round</option>
+              <option value="square">Square</option>
+              <option value="butt">Butt</option>
+            </select>
+        </section>
+        <section class="input-solo">
+            <label for="color" >Pick a Color: </label>
+            <input type="color" value="#ad1a1a" name="color" id="color" autocomplete="off">
+        </section>
+        <section class="input-solo">
+            <label for="paddingLeft">Pick Line Width</label>
+            <input type="number" name="linewidth" id="linewidth" min="1" max="100" value="10" autocomplete="off">
+        </section>  
+        <button class="resetButton" id="clearCanvas">
+            <span class="mobile">Reset</span> <i class="fas fa-redo"></i>
+        </button>
+      </section>
+      <section class="canvas"></section>
+        <canvas id="drw" class="canvas-solo"></canvas>
+      </section>
+    </section>
     <script src="src/js/script.js"></script>
   </body>
 </html>
